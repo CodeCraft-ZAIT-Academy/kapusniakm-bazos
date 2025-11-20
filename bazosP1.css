@@ -1,0 +1,215 @@
+.header1 {
+    background-color: orange;
+    color: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    z-index: 10000;
+}
+
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.toggle-dark {
+    position: absolute;
+    width: 1px;
+}
+
+.dark-toggle {
+    margin-top: 25px;
+    width: 100px;
+    height: 51px;
+    margin-left: 1400px;
+    border-radius: 25px;
+    border: none;
+
+}
+
+.dark-toggle:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+
+
+
+}
+
+
+.nazov-text {
+    font-size: 50px;
+    margin: 0px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.nazov-text:hover {
+    color: orangered;
+    transition: 0.5s;
+
+}
+
+.nazov {
+    align-content: center;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.searchbar-text {
+    height: 35px;
+    font-size: 20px;
+    width: 670px;
+
+}
+
+.searchbar {
+    position: absolute;
+    top: 35px;
+    left: 200px;
+
+}
+
+
+
+.pridat-inzerat {
+    background-color: orange;
+    height: 50px;
+    text-align: center;
+    margin-top: 25px;
+    align-content: center;
+    width: 120px;
+    border-radius: 25px;
+    margin-left: 1130px;
+
+}
+
+.pridati-text {
+    color: black;
+    border-radius: 25px;
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.pridati-text:hover {
+    background-color: orangered;
+    transition: 0.5s;
+}
+
+.pridati-text:active {
+    transform: translateY(10px);
+}
+
+
+
+
+.oblubene-inz {
+    background-color: orange;
+    height: 50px;
+    text-align: center;
+    margin-top: 25px;
+    align-content: center;
+    width: 120px;
+    border-radius: 25px;
+    margin-left: 1095px;
+    position: absolute;
+
+}
+
+.oblubenei-text {
+    color: black;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.oblubenei-text:hover {
+    background-color: orangered;
+    transition: 0.5s;
+}
+
+.oblubenei-text:active {
+    transform: translateY(10px);
+}
+
+
+
+.moje-inz {
+    background-color: orange;
+    height: 50px;
+    text-align: center;
+    margin-top: 25px;
+    align-content: center;
+    width: 120px;
+    border-radius: 25px;
+    margin-left: 926px;
+    position: absolute;
+
+}
+
+.mojei-text {
+    color: black;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.mojei-text:hover {
+    background-color: orangered;
+    transition: 0.5s;
+}
+
+.mojei-text:active {
+    transform: translateY(10px);
+}
+
+
+.div-grid {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 360px 360px 360px 360px ;
+    height: 200px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.category{
+object-fit: cover;
+height: 300px;
+width: 300px;
+border: none;
+background-color: rgba(255, 255, 255, 0);
+
+}
+.category-img{
+height: 280px;
+width: 280px;
+
+}
+.cat-div{
+    position: relative;
+}
+.cat-div:active{
+    transform: translateY(10px);
+}
