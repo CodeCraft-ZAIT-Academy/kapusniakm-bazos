@@ -1,195 +1,155 @@
+
 .header1 {
     background-color: orange;
     color: black;
     position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 100px;
+    width: 100%;
     z-index: 10000;
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-body {
-    padding: 25px;
-    background-color: white;
-    color: black;
-    font-size: 25px;
+
+
+.pridati-text:active {
+    transform: translateY(10px);
+}
+.oblubenei-text:active {
+    transform: translateY(10px);
+}
+.mojei-text:active {
+    transform: translateY(10px);
 }
 
-.dark-mode {
-    background-color: black;
+.nazov {
+    display: flex;
+    align-items: center;
+}
+
+.nazov-text {
+    font-size: 50px;
     color: white;
+    text-decoration: none;
+}
+.nazov-text:hover {
+    color: rgb(255, 68, 0);
+    transition: 0.5s;
 }
 
+.searchbar {
+    flex: 1;                 
+    display: flex;
+    justify-content: center;
+}
+.searchbar-text {
+    height: 35px;
+    font-size: 20px;
+    width: 60%;
+    max-width: 10000px;
+    border-radius: 25px;
+}
+
+.moje-inz,
+.oblubene-inz,
+.pridat-inzerat,
 .toggle-dark {
-    position: absolute;
-    width: 1px;
+    display: flex;
+    align-items: center;
+    background-color: orange;
+}
+
+.mojei-text,
+.pridati-text,
+.dark-toggle {
+    height: 50px;
+    padding: 0 18px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+.oblubenei-text{
+    height: 50px;
+
+    padding: 0 18px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: orange;
 }
 
 .dark-toggle {
-    margin-top: 25px;
-    width: 100px;
+    background-color: white;
+        border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://www.freeiconspng.com/thumbs/crescent-moon-png/crescent-moon-png-20.png");
+}
+.dark-mode .dark-toggle {
+    background-image: url("https://static.thenounproject.com/png/1843184-200.png");
+}
+.dark-toggle {
+    width: 50px;
     height: 51px;
-    margin-left: 1400px;
     border-radius: 25px;
     border: none;
 
 }
 
 .dark-toggle:hover {
+    background-color: orangered;
+    color: white;
+    transition: 0.5s;
+
+}
+.dark-mode {
     background-color: black;
     color: white;
-    transition: 0.5s;
-
-
-
 }
 
-
-.nazov-text {
-    font-size: 50px;
-    margin: 0px;
-    text-decoration: none;
-    color: white;
-
-}
-
-.nazov-text:hover {
-    color: orangered;
-    transition: 0.5s;
-
-}
-
-.nazov {
-    align-content: center;
-    text-align: center;
-    margin-left: 10px;
-}
-
-.searchbar-text {
-    height: 35px;
-    font-size: 20px;
-    width: 670px;
-
-}
-
-.searchbar {
-    position: absolute;
-    top: 35px;
-    left: 200px;
-
-}
-
-
-
-.pridat-inzerat {
-    background-color: orange;
-    height: 50px;
-    text-align: center;
-    margin-top: 25px;
-    align-content: center;
-    width: 120px;
-    border-radius: 25px;
-    margin-left: 1130px;
-
-}
-
-.pridati-text {
-    color: black;
-    border-radius: 25px;
-    width: 120px;
-    height: 50px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
+.mojei-text:hover,
+.oblubenei-text:hover,
 .pridati-text:hover {
     background-color: orangered;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
-.pridati-text:active {
-    transform: translateY(10px);
+.moje-inz,
+.oblubene-inz,
+.pridat-inzerat,
+.toggle-dark {
+    margin: 0;
+    position: static;
 }
-
-
-
-
-.oblubene-inz {
-    background-color: orange;
-    height: 50px;
-    text-align: center;
-    margin-top: 25px;
-    align-content: center;
-    width: 120px;
+.oblubenei-button{
+       height: 50px;
+    padding: 0 18px;
     border-radius: 25px;
-    margin-left: 1095px;
-    position: absolute;
-
-}
-
-.oblubenei-text {
-    color: black;
-    border-radius: 25px;
-    width: 150px;
-    height: 50px;
-    font-size: 16px;
     border: none;
     cursor: pointer;
-}
-
-.oblubenei-text:hover {
-    background-color: orangered;
-    transition: 0.5s;
-}
-
-.oblubenei-text:active {
-    transform: translateY(10px);
-}
-
-
-
-.moje-inz {
     background-color: orange;
-    height: 50px;
-    text-align: center;
-    margin-top: 25px;
-    align-content: center;
-    width: 120px;
-    border-radius: 25px;
-    margin-left: 926px;
-    position: absolute;
-
 }
 
-.mojei-text {
-    color: black;
-    border-radius: 25px;
-    width: 150px;
-    height: 50px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.mojei-text:hover {
-    background-color: orangered;
-    transition: 0.5s;
-}
-
-.mojei-text:active {
-    transform: translateY(10px);
-}
 
 
 .div-grid {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: 360px 360px 360px 360px ;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     height: 200px;
     column-gap: 20px;
     row-gap: 20px;
@@ -212,4 +172,29 @@ width: 280px;
 }
 .cat-div:active{
     transform: translateY(10px);
+}
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: orange;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-box input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
 }
