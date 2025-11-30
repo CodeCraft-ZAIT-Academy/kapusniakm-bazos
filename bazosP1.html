@@ -38,7 +38,7 @@ function login() {
     const msg = document.getElementById("loginMessage");
 
 
-    if (user === "Matej" && pass === "1234") {
+    if (user === "kapusniakmato@gmail.com" && pass === "1234") {
         msg.style.color = "green";
         msg.textContent = "Vitaj, " + user + "!";
 
@@ -58,7 +58,7 @@ function login() {
 <div class="header1">
 
     <div class="nazov">
-        <a class="nazov-text" href="bazosP1.html">Bazoš</a>
+        <a class="nazov-text" href="bazosP1.html">Bazod </a>
     </div>
 
     <div class="searchbar">
@@ -66,14 +66,14 @@ function login() {
     </div>
 <div class="oblubene-inz">
     <button class="oblubenei-button" onclick="openLogin()">
-        <img class="oblubenei-text" src="https://cdn-icons-png.flaticon.com/512/310/310818.png" alt="Prihlasovanie">
+       <div class="oblubenei-text"> <img class="prihlasimg" src="https://cdn-icons-png.flaticon.com/512/310/310818.png" alt="Prihlasovanie"> </div>
     </button>
 </div>
 
 <div id="loginPopup" class="login-popup">
     <div class="login-box">
         <h2>Prihlásenie</h2>
-        <input type="text" id="username" placeholder="Meno">
+        <input type="email" id="username" placeholder="email">
         <input type="password" id="password" placeholder="Heslo">
 
         <button onclick="login()">Prihlásiť sa</button>
@@ -102,46 +102,96 @@ function login() {
 
     <div class="div-grid">
 
-        <div class="cat-div"> <button class="category"><img class="category-img"
-                    src="https://freesvg.org/img/liakad_car_front.png" alt="Auto" title="Auto"></button> </div>
+        <div class="cat-div">
+    <a href="bazosP2-auto.html">
+        <button class="category">
+            <img class="category-img" src="https://freesvg.org/img/liakad_car_front.png" alt="Auto">
+        </button>
+    </a>
 
-        <div class="cat-div"> <button class="category"><img class="category-img"
-                    src="https://png.pngtree.com/png-vector/20240920/ourmid/pngtree-an-artwork-featuring-a-vintage-motorcycle-png-image_13877429.png"
-                    alt="Motorka" title="Motorka"></button> </div>
-
-
-        <div class="cat-div"> <button class="category"><img class="category-img"
-                    src="https://www.onlygfx.com/wp-content/uploads/2024/08/old-computer-clipart.png" alt="Pocitac"
-                    title="Počítač"></button> </div>
+    <div class="cat-text">Autá,súčiastky do aut...</div>
+</div>
 
 
-        <div class="cat-div"> <button class="category"><img class="category-img"
-                    src="https://pngimg.com/d/book_PNG51049.png" alt="Knihy" title="Knihy"></button> </div>
 
 
-        <div class="cat-div"> <button class="category"><img class="category-img"
-                    src="https://static.vecteezy.com/system/resources/previews/028/831/084/non_2x/washing-machine-illustration-ai-generative-png.png"
-                    alt="Práčka" title="Práčka pre Brańa"></button> </div>
+      <div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
+    <button class="category">
+        <img class="category-img"
+            src="https://png.pngtree.com/png-vector/20240920/ourmid/pngtree-an-artwork-featuring-a-vintage-motorcycle-png-image_13877429.png"
+            alt="Motorka" title="Motorka">
+    </button>
+    <div class="cat-text">Motorky,skútre,súčiastky...</div>
+</div>
 
+<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
+    <button class="category">
+        <img class="category-img"
+            src="https://www.onlygfx.com/wp-content/uploads/2024/08/old-computer-clipart.png"
+            alt="Pocitac" title="Počítač">
+    </button>
+    <div class="cat-text">Komponenty,používané pc, notebooky...</div>
+</div>
 
-        <div class="cat-div"> <button class="category"><img class="category-img"
-                    src="https://www.pngplay.com/wp-content/uploads/8/Submarine-Transparent-PNG.png"
-                    alt="Nukleárna ponorka" title="Nukleárna ponorka"></button> </div>
+<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
+    <button class="category">
+        <img class="category-img"
+            src="https://pngimg.com/d/book_PNG51049.png"
+            alt="Knihy" title="Knihy">
+    </button>
+    <div class="cat-text">Knihy,časopisy,rozbalené/nové knihy...</div>
+</div>
 
+<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
+    <button class="category">
+        <img class="category-img"
+            src="https://static.vecteezy.com/system/resources/previews/028/831/084/non_2x/washing-machine-illustration-ai-generative-png.png"
+            alt="Práčka" title="Práčka pre Brańa">
+    </button>
+    <div class="cat-text">Spotrebiče,práčky,umývačky...</div>
+</div>
 
-        <div class="cat-div"> <button class="category"><img class="category-img"
-                    src="https://www.nicepng.com/png/full/273-2732393_t-shirt-clipart-blue-t-shirt-cartoon.png"
-                    alt="Oblečenie" title="Oblečenie"></button> </div>
+<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
+    <button class="category">
+        <img class="category-img"
+            src="https://www.pngplay.com/wp-content/uploads/8/Submarine-Transparent-PNG.png"
+            alt="Nukleárna ponorka" title="Nukleárna ponorka">
+    </button>
+    <div class="cat-text">Proste ponorky :D</div>
+</div>
 
+<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
+    <button class="category">
+        <img class="category-img"
+            src="https://www.nicepng.com/png/full/273-2732393_t-shirt-clipart-blue-t-shirt-cartoon.png"
+            alt="Oblečenie" title="Oblečenie">
+    </button>
+    <div class="cat-text">Nohavice,tričká,topánky...</div>
+</div>
 
-        <div class="cat-div"> <button class="category"><img class="category-img"
-                    src="https://png.pngtree.com/png-vector/20190130/ourmid/pngtree-illustration-transport-bicycle-bicyclemountain-bikebicycleillustration-bicycle-png-image_688927.png"
-                    alt="Šport" title="Šport"></button> </div>
+<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
+    <button class="category">
+        <img class="category-img"
+            src="https://png.pngtree.com/png-vector/20190130/ourmid/pngtree-illustration-transport-bicycle-bicyclemountain-bikebicycleillustration-bicycle-png-image_688927.png"
+            alt="Šport" title="Šport">
+    </button>
+    <div class="cat-text">Športové vybavenie,športové oblečenie...</div>
+</div>
 
 
     </div>
 
 
+
+    <footer class="footer">
+<p style="background-color: orange; text-align: center; width: 300px;">Kontaktné info: </p>
+<p class="footinfo">Gmail: kapusniakmato@gmail.com</p>
+<p class="footinfo">Tel. číslo: 123456789</p>
+<p class="footinfo">Meno: Matej Kapusniak</p>
+<p class="footinfo">Adres: 01361 Kotešová 538</p>
+ 
+
+    </footer>
 
 
 
