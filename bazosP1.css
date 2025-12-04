@@ -233,8 +233,8 @@ object-fit: cover;
 
 }
 .footer{
-    position: sticky;
-  top: 2000px;
+
+    bottom: 0;
     left: 0;
     right: 0;
     height: 150px;
@@ -277,4 +277,13 @@ font-size: 20px;
 }
 .kontakt:hover{
 text-decoration: underline 2px solid black;
+}
+.user-display {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+}
+.logout-btn {
+    cursor: pointer;
 }

@@ -53,6 +53,19 @@
                 msg.textContent = "Zlé meno alebo heslo!";
             }
         }
+        window.onload = function () {
+    const savedName = localStorage.getItem("loggedName");
+
+    if (savedName) {
+        document.getElementById("userDisplay").textContent = savedName;
+    }
+};
+
+function logout() {
+    localStorage.removeItem("loggedName");
+    document.getElementById("userDisplay").textContent = "";
+}
+
     </script>
 
 
@@ -68,6 +81,7 @@
             <input class="searchbar-text" type="search" placeholder=" Search">
         </div>
         <div class="oblubene-inz">
+            <div id="userDisplay" class="user-display"></div>
             <button class="oblubenei-button" onclick="openLogin()">
                 <div class="oblubenei-text"> <img class="prihlasimg"
                         src="https://cdn-icons-png.flaticon.com/512/310/310818.png" alt="Prihlasovanie"> </div>
@@ -79,7 +93,7 @@
                 <h2>Prihlásenie</h2>
                 <input type="email" id="username" placeholder="email">
                 <input type="password" id="password" placeholder="Heslo">
-
+                <button onclick="logout()" class="logout-btn">Odhlásiť</button>
                 <button onclick="login()">Prihlásiť sa</button>
                 <button onclick="closeLogin()">Zatvoriť</button>
 

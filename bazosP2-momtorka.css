@@ -309,3 +309,12 @@ font-size: 20px;
 .kontakt:hover{
 text-decoration: underline 2px solid black;
 }
+.user-display {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+}
+.logout-btn {
+    cursor: pointer;
+}
