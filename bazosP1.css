@@ -83,11 +83,11 @@
 width: 50px;
 height: 50px;
     padding: 0 0px;
-=======
+
     height: 50px;
 
-    padding: 0 18px;
->>>>>>> b6f0ed1309ee9b209d75c45058445d7192564c29
+    padding: 0 0px;
+
     font-size: 16px;
     border-radius: 25px;
     border: none;
@@ -100,9 +100,6 @@ background-color: orangered;
 transition: 0.3s;
 
 
-=======
-    background-color: orange;
->>>>>>> b6f0ed1309ee9b209d75c45058445d7192564c29
 }
 
 .dark-toggle {
@@ -138,10 +135,6 @@ transition: 0.3s;
 }
 
 .mojei-text:hover,
-<<<<<<< HEAD
-=======
-.oblubenei-text:hover,
->>>>>>> b6f0ed1309ee9b209d75c45058445d7192564c29
 .pridati-text:hover {
     background-color: orangered;
     transition: 0.3s;
@@ -201,9 +194,9 @@ width: 280px;
     height: 100%;
 
     background: rgba(0, 0, 0, 0.6);
-=======
+
     background: white(0, 0, 0, 0.6);
->>>>>>> b6f0ed1309ee9b209d75c45058445d7192564c29
+
     justify-content: center;
     align-items: center;
 }
@@ -233,33 +226,55 @@ height: 50px;
 object-fit: cover;
 
 }
+.footer-div{
+    margin-top: 900px;
+    position: sticky;
+    top: 100%;
 
+}
 .footer{
     position: sticky;
   top: 2000px;
     left: 0;
     right: 0;
-    height: 200px;
+    height: 150px;
     width: 100%;
     z-index: 10000;
     background-color: orange;
 
     align-items: center;
+    text-align: center;
     padding: 0 20px;
     box-sizing: border-box;
     color: black;
-}
-
-.footinfo{
-border-radius: 25px;
-width: 300px;
-text-align: center;
-background-color: white;
-
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+gap: 70px;
 
 }
+.footer-content{
 
-
-=======
 }
->>>>>>> b6f0ed1309ee9b209d75c45058445d7192564c29
+.link{
+    margin-top: 50px;
+text-decoration: underline solid orange;
+color: black;
+display: inline-block;
+display: inline-flex;
+margin-left: 20px;
+font-size: 20px;
+
+}
+
+.kontakt{   
+    text-decoration: underline solid orange;
+    list-style: none;
+    color: black;
+    font-size: 40px;
+}
+.kontakt:hover{
+text-decoration: underline 2px solid black;
+}
