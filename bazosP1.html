@@ -4,26 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BazosP1</title>
-
-
-
+    <title>Bazod</title>
+    <link rel="stylesheet" href="bazosP1.css">
 </head>
 
-<body style="height: 3000px;">
-
-    <link rel="stylesheet" href="bazosP1.css">
-    <script>
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        }
-        function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-    </script>
+<body>
 
 <script>
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+
     function openLogin() {
         document.getElementById("loginPopup").style.display = "flex";
     }
@@ -32,16 +23,12 @@
         document.getElementById("loginPopup").style.display = "none";
     }
 
-
     window.onload = function () {
         const savedName = localStorage.getItem("loggedName");
-
         if (savedName) {
             document.getElementById("userDisplay").textContent = savedName;
         }
     };
-
-
 
     function login() {
         const name = document.getElementById("fullname").value;
@@ -55,18 +42,11 @@
         const correctPass = "1234";
 
         if (user === correctEmail && pass === correctPass && name.trim() !== "") {
-
             msg.style.color = "green";
             msg.textContent = "Vitaj, " + name + "!";
-
             userDisplay.textContent = name;
-
             localStorage.setItem("loggedName", name);
-
-            setTimeout(() => {
-                closeLogin();
-            }, 1000);
-
+            setTimeout(() => closeLogin(), 1000);
         } else {
             msg.style.color = "red";
             msg.textContent = "Zlé meno, email alebo heslo!";
@@ -79,168 +59,132 @@
     }
 </script>
 
-    
-
-
 
 
 <div class="header1">
 
     <div class="nazov">
-        <a class="nazov-text" href="bazosP1.html">Bazod </a>
+        <a class="nazov-text" href="bazosP1.html">Bazod</a>
     </div>
 
     <div class="searchbar">
-        <input class="searchbar-text" type="search" placeholder=" Search">
+        <input class="searchbar-text" type="search" placeholder="Search">
     </div>
+
     <div class="oblubene-inz">
         <div id="userDisplay" class="user-display"></div>
-    
+
         <button class="oblubenei-button" onclick="openLogin()">
-           <div class="oblubenei-text">
-               <img class="prihlasimg" src="https://cdn-icons-png.flaticon.com/512/310/310818.png" alt="Prihlasovanie">
-           </div>
+            <img class="prihlasimg" src="https://cdn-icons-png.flaticon.com/512/310/310818.png">
         </button>
     </div>
-    
-    <div id="loginPopup" class="login-popup">
-        <div class="login-box">
-            <h2>Prihlásenie</h2>
-    
-            <input type="text" id="fullname" placeholder="Meno">
-            <input type="email" id="username" placeholder="Email">
-            <input type="password" id="password" placeholder="Heslo">
-            <button onclick="logout()" class="logout-btn">Odhlásiť</button>
-    
-            <button onclick="login()">Prihlásiť sa</button>
-            <button onclick="closeLogin()">Zatvoriť</button>
-    
-            <p id="loginMessage">Zadajte meno, email a heslo</p>
-        </div>
-    </div>
-    
-
 
     <div class="moje-inz">
+        <a href="moje-inz.html">
         <input class="mojei-text" type="button" value="Moje inzeráty">
+        </a>
     </div>
-
 
     <div class="pridat-inzerat">
+        <a href="pridat-inz.html">
         <input class="pridati-text" type="button" value="Pridať inzerát">
+        </a>
     </div>
-
 
     <div class="toggle-dark">
-      <button class="dark-toggle" onclick="toggleDarkMode()"></button>
+        <button class="dark-toggle" onclick="toggleDarkMode()"></button>
     </div>
 
 </div>
 
-    <div class="div-grid">
 
-        <div class="cat-div">
-    <a href="bazosP2-auto.html">
-        <button class="category">
-            <img class="category-img" src="https://freesvg.org/img/liakad_car_front.png" alt="Auto">
-        </button>
-    </a>
+<div id="loginPopup" class="login-popup">
+    <div class="login-box">
+        <h2>Prihlásenie</h2>
 
-    <div class="cat-text">Autá,súčiastky do aut...</div>
+        <input type="text" id="fullname" placeholder="Meno">
+        <input type="email" id="username" placeholder="Email">
+        <input type="password" id="password" placeholder="Heslo">
+
+        <button onclick="login()">Prihlásiť sa</button>
+        <button onclick="logout()" class="logout-btn">Odhlásiť</button>
+        <button onclick="closeLogin()">Zatvoriť</button>
+
+        <p id="loginMessage">Zadajte meno, email a heslo</p>
+    </div>
 </div>
 
 
 
+<div class="div-grid">
 
-      <div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
+    <div class="cat-div">
+        <a href="bazosP2-auto.html">
+            <button class="category">
+                <img class="category-img" src="https://cdn-icons-png.freepik.com/256/6878/6878286.png?ga=GA1.1.1005906760.1767530401&semt=ais_white_label">
+            </button>
+        </a>
+        <div class="cat-text">Autá a súčiastky</div>
+    </div>
+
+    <div class="cat-div">
         <a href="bazosP2-motorka.html">
-    <button class="category">
-        <img class="category-img"
-            src="https://png.pngtree.com/png-vector/20240920/ourmid/pngtree-an-artwork-featuring-a-vintage-motorcycle-png-image_13877429.png"
-            alt="Motorka" title="Motorka">
-    </button>
-</a>
-    <div class="cat-text">Motorky,skútre,súčiastky...</div>
-</div>
-
-<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
-    <button class="category">
-        <img class="category-img"
-            src="https://www.onlygfx.com/wp-content/uploads/2024/08/old-computer-clipart.png"
-            alt="Pocitac" title="Počítač">
-    </button>
-    <div class="cat-text">Komponenty,používané pc, notebooky...</div>
-</div>
-
-<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
-    <button class="category">
-        <img class="category-img"
-            src="https://pngimg.com/d/book_PNG51049.png"
-            alt="Knihy" title="Knihy">
-    </button>
-    <div class="cat-text">Knihy,časopisy,rozbalené/nové knihy...</div>
-</div>
-
-<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
-    <button class="category">
-        <img class="category-img"
-            src="https://static.vecteezy.com/system/resources/previews/028/831/084/non_2x/washing-machine-illustration-ai-generative-png.png"
-            alt="Práčka" title="Práčka pre Brańa">
-    </button>
-    <div class="cat-text">Spotrebiče,práčky,umývačky...</div>
-</div>
-
-<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
-    <button class="category">
-        <img class="category-img"
-            src="https://www.pngplay.com/wp-content/uploads/8/Submarine-Transparent-PNG.png"
-            alt="Nukleárna ponorka" title="Nukleárna ponorka">
-    </button>
-    <div class="cat-text">Proste ponorky :D</div>
-</div>
-
-<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
-    <button class="category">
-        <img class="category-img"
-            src="https://www.nicepng.com/png/full/273-2732393_t-shirt-clipart-blue-t-shirt-cartoon.png"
-            alt="Oblečenie" title="Oblečenie">
-    </button>
-    <div class="cat-text">Nohavice,tričká,topánky...</div>
-</div>
-
-<div class="cat-div" onclick="location.href='bazosP2.html'" style="cursor: pointer;">
-    <button class="category">
-        <img class="category-img"
-            src="https://png.pngtree.com/png-vector/20190130/ourmid/pngtree-illustration-transport-bicycle-bicyclemountain-bikebicycleillustration-bicycle-png-image_688927.png"
-            alt="Šport" title="Šport">
-    </button>
-    <div class="cat-text">Športové vybavenie,športové oblečenie...</div>
-</div>
-
-
+            <button class="category">
+                <img class="category-img" src="https://cdn-icons-png.freepik.com/256/519/519639.png?ga=GA1.1.1005906760.1767530401&semt=ais_white_label">
+            </button>
+        </a>
+        <div class="cat-text">Motorky a skútre</div>
     </div>
+
+    <div class="cat-div">
+        <a href="bazosP2-pc.html">
+            <button class="category">
+                <img class="category-img" src="https://cdn-icons-png.freepik.com/256/2043/2043504.png?ga=GA1.1.1005906760.1767530401&semt=ais_white_label">
+            </button>
+        </a>
+        <div class="cat-text">Počítače a komponenty</div>
+    </div>
+
+    <div class="cat-div">
+        <a href="bazosP2-knihy.html">
+            <button class="category">
+                <img class="category-img" src="https://cdn-icons-png.freepik.com/256/32/32354.png?ga=GA1.1.1005906760.1767530401&semt=ais_white_label">
+            </button>
+        </a>
+        <div class="cat-text">Knihy a časopisy</div>
+    </div>
+
+    <div class="cat-div">
+        <a href="bazosP2-spotrebice.html">
+            <button class="category">
+                <img class="category-img" src="https://cdn-icons-png.freepik.com/256/10206/10206369.png?ga=GA1.1.1005906760.1767530401&semt=ais_white_label">
+            </button>
+        </a>
+        <div class="cat-text">Spotrebiče</div>
+    </div>
+
+    <div class="cat-div">
+        <a href="bazosP2-oblecenie.html">
+            <button class="category">
+                <img class="category-img" src="https://cdn-icons-png.freepik.com/256/11622/11622234.png?ga=GA1.1.1005906760.1767530401&semt=ais_white_label">
+            </button>
+        </a>
+        <div class="cat-text">Oblečenie</div>
+    </div>
+
+</div>
 
 
 <div class="footer-div">
     <div class="footer">
         <ul class="footer-content">
             <li class="kontakt"><a class="kontakt" href="">Kontakt</a></li>
-
-            <li class="link"><strong>Adresa: </strong> 01361 Kotešová</li>
-
-            <li class="link"><strong>Tel. číslo: </strong> 123456789</li>
-
-            <li class="link"><strong>Email: </strong> kapusniakmato@gmail.com</li>
+            <li class="link"><strong>Adresa:</strong> 01361 Kotešová</li>
+            <li class="link"><strong>Tel. číslo:</strong> 123456789</li>
+            <li class="link"><strong>Email:</strong> kapusniakmato@gmail.com</li>
         </ul>
     </div>
-
-
-    </footer>
 </div>
 
-
-
-
 </body>
-
 </html>

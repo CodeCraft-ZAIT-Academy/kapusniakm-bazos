@@ -1,192 +1,167 @@
 
+body {
+    margin: 0;
+    background: #F4F4F4;
+    font-family: Arial;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .header1 {
-    background-color: orange;
-    color: black;
+    background: #2C3E50;
+    padding: 10px 20px;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    width: 100%;
-    z-index: 10000;
-
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: space-between; 
-    padding: 0 20px;
+    z-index: 1000;
     box-sizing: border-box;
 }
 
-
-
-.pridati-text:active {
-    transform: translateY(10px);
-}
-.oblubenei-text:active {
-    transform: translateY(10px);
-}
-.mojei-text:active {
-    transform: translateY(10px);
-}
-
-.nazov {
-    display: flex;
-    align-items: center;
-}
-
 .nazov-text {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     text-decoration: none;
 }
-.nazov-text:hover {
-    color: rgb(255, 68, 0);
-    transition: 0.5s;
-}
 
 .searchbar {
-    flex: 1;                 
-    display: flex;
-    justify-content: center;
-}
-.searchbar-text {
-    height: 35px;
-    font-size: 20px;
-    width: 60%;
-    max-width: 10000px;
-    border-radius: 25px;
+    flex: 1;
+    min-width: 200px;
 }
 
-.moje-inz,
-.oblubene-inz,
-.pridat-inzerat,
-.toggle-dark {
+.searchbar-text {
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+}
+
+.oblubene-inz {
     display: flex;
     align-items: center;
-    background-color: orange;
+    gap: 10px;
 }
+
+.user-display {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
 
 .mojei-text,
 .pridati-text,
-.dark-toggle {
-    height: 50px;
-    padding: 0 18px;
-    font-size: 16px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    background-color: white;
-}
-.oblubenei-text{
-
-width: 50px;
-height: 50px;
-    padding: 0 0px;
-
-    height: 50px;
-
-    padding: 0 0px;
-
-    font-size: 16px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-
-    background-color: white;
-}
-.oblubenei-text:hover{
-background-color: orangered;
-transition: 0.3s;
-
-
-}
-
-.dark-toggle {
-    background-color: white;
-        border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background-size: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("https://www.freeiconspng.com/thumbs/crescent-moon-png/crescent-moon-png-20.png");
-}
-.dark-mode .dark-toggle {
-    background-image: url("https://static.thenounproject.com/png/1843184-200.png");
-}
-.dark-toggle {
-    width: 50px;
-    height: 51px;
-    border-radius: 25px;
-    border: none;
-
-}
-
-.dark-toggle:hover {
-    background-color: orangered;
+.oblubenei-button {
+    background: #3498DB;
     color: white;
-    transition: 0.5s;
-
-}
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-.mojei-text:hover,
-.pridati-text:hover {
-    background-color: orangered;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.moje-inz,
-.oblubene-inz,
-.pridat-inzerat,
-.toggle-dark {
-    margin: 0;
-    position: static;
-}
-.oblubenei-button{
-       height: 50px;
-    padding: 0 18px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    background-color: orange;
+.mojei-text:hover,
+.pridati-text:hover,
+.oblubenei-button:hover {
+    background: #1F78B4;
+    transform: translateY(-3px);
 }
 
+.prihlasimg {
+    width: 40px;
+    height: 40px;
+}
+
+.dark-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    background-image: url("https://www.freeiconspng.com/thumbs/crescent-moon-png/crescent-moon-png-20.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.dark-mode .dark-toggle {
+    background-image: url("https://static.thenounproject.com/png/1843184-200.png");
+}
+
+.dark-mode {
+    background-color: #111;
+    color: white;
+}
 
 
 .div-grid {
-    margin-top: 100px;
+    margin-top: 160px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    height: 200px;
-    column-gap: 20px;
-    row-gap: 20px;
-    
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding-bottom: 60px; 
 }
-.category{
-object-fit: cover;
-height: 300px;
-width: 300px;
-border: none;
-background-color: rgba(255, 255, 255, 0);
-margin-left: 18%;
-}
-.category-img{
-height: 280px;
-width: 280px;
 
-}
-.cat-div{
-    position: relative;
 
+.cat-div {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
 }
-.cat-div:active{
-    transform: translateY(10px);
+
+.dark-mode .cat-div {
+    background: #1E1E1E;
+    color: white;
 }
+
+.cat-div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.category {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.category-img {
+    width: 260px;   
+    height: 260px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.cat-div:hover .category-img {
+    transform: scale(1.08);
+}
+
+.cat-text {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.dark-mode .cat-text {
+    color: white;
+}
+
 .login-popup {
     display: none;
     position: fixed;
@@ -194,98 +169,60 @@ width: 280px;
     left: 0;
     width: 100%;
     height: 100%;
-
-    background: rgba(0, 0, 0, 0.6);
-
-    background: white(0, 0, 0, 0.6);
-
+    background: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
 }
 
 .login-box {
-    background: orange;
+    background: #3498DB;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    color: white;
 }
 
-.login-box input {
-    width: 90%;
-    padding: 8px;
-    margin: 5px 0;
-
-}
-.cat-text{
-margin-left: 30%;
-margin-bottom: 10px;
+.footer-div {
+    margin-top: auto;
 }
 
-.prihlasimg{
-width: 50px;
-height: 50px;
-object-fit: cover;
-
-}
-.footer-div{
-    margin-top: 900px;
-    position: sticky;
-    top: 100%;
-
-}
-.footer{
-
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    width: 100%;
-    z-index: 10000;
-    background-color: orange;
-
-    align-items: center;
+.footer {
+    background: #2C3E50;
+    padding: 20px;
     text-align: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-    color: black;
+    color: white;
+}
+
+.footer-content {
     list-style: none;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-gap: 70px;
-
-}
-.footer-content{
-
-}
-.link{
-    margin-top: 50px;
-text-decoration: underline solid orange;
-color: black;
-display: inline-block;
-display: inline-flex;
-margin-left: 20px;
-font-size: 20px;
-
+    padding: 0;
 }
 
-.kontakt{   
-    text-decoration: underline solid orange;
-    list-style: none;
-    color: black;
-    font-size: 40px;
+.link, .kontakt {
+    margin: 10px 0;
 }
-.kontakt:hover{
-text-decoration: underline 2px solid black;
-}
-.user-display {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    margin-right: 10px;
-}
-.logout-btn {
-    cursor: pointer;
+
+@media (min-width: 1800px) {
+
+    .div-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 50px;
+        width: 85%;
+    }
+
+    .cat-div {
+        padding: 35px;
+        border-radius: 20px;
+    }
+
+    .category-img {
+        width: 330px;
+        height: 330px;
+    }
+
+    .cat-text {
+        font-size: 26px;
+        margin-top: 20px;
+    }
 }
