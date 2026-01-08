@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     background: #F4F4F4;
@@ -28,7 +27,14 @@ body {
     font-size: 40px;
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
+
+.nazov-text:hover {
+    color: #3498DB;
+}
+
 
 .searchbar {
     flex: 1;
@@ -78,6 +84,8 @@ body {
 .prihlasimg {
     width: 40px;
     height: 40px;
+    background-color: white;
+    border-radius: 25px;
 }
 
 .dark-toggle {
@@ -111,7 +119,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
-    padding-bottom: 60px; 
+    padding-bottom: 60px;
 }
 
 
@@ -120,7 +128,7 @@ body {
     padding: 25px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
 }
 
@@ -131,7 +139,7 @@ body {
 
 .cat-div:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .category {
@@ -141,7 +149,7 @@ body {
 }
 
 .category-img {
-    width: 260px;   
+    width: 260px;
     height: 260px;
     object-fit: contain;
     transition: 0.3s;
@@ -169,7 +177,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
 }
@@ -199,8 +207,13 @@ body {
     padding: 0;
 }
 
-.link, .kontakt {
+.link,
+.kontakt {
     margin: 10px 0;
+}
+
+.kontakt {
+    color: #3498DB;
 }
 
 @media (min-width: 1800px) {
@@ -225,4 +238,13 @@ body {
         font-size: 26px;
         margin-top: 20px;
     }
+}
+
+.dark-mode .category-img {
+
+    filter: invert(1);
+}
+
+.category-img {
+    transition: filter 0.3s ease;
 }

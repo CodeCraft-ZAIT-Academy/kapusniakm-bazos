@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+.kontakt-container {
+    width: 90%;
+    margin: 120px auto 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.kontakt-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.kontakt-box {
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.mapa {
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.dark-mode .kontakt-container {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .kontakt-box {
+    background: #333;
+    border-color: #555;
+}
+
+.kontakt-container2 {
+    width: 90%;
+    margin: 12px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

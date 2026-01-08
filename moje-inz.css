@@ -33,6 +33,12 @@ body {
     font-size: 40px;
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nazov-text:hover {
+    color: #3498DB;
 }
 
 .searchbar {
@@ -208,3 +214,6 @@ body {
     background: #C0392B;
     transform: translateY(-2px);
 }
+.kontakt{
+    color: #3498DB;
+    }
