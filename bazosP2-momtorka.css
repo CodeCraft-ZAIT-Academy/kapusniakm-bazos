@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body { background-color: #f3f3f3;
+     color: #222; 
+     padding-top: 120px; 
+     }
 
 .header1 {
     background-color: orange;
@@ -13,19 +24,15 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 0 20px;
-    box-sizing: border-box;
 }
-.pridati-text:active {
-    transform: translateY(10px);
+
+.page-content {
+    margin-top: 120px;
+    padding: 20px;
 }
-.oblubenei-text:active {
-    transform: translateY(10px);
-}
-.mojei-text:active {
-    transform: translateY(10px);
-}
+
 
 .nazov {
     display: flex;
@@ -33,27 +40,34 @@
 }
 
 .nazov-text {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     text-decoration: none;
-}
-.nazov-text:hover {
-    color: rgb(255, 68, 0);
-    transition: 0.5s;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
+.nazov-text:hover {
+    color: rgb(255, 68, 0);
+}
+
+
 .searchbar {
-    flex: 1;                 
+    flex: 1;
     display: flex;
     justify-content: center;
 }
+
 .searchbar-text {
     height: 35px;
-    font-size: 20px;
+    font-size: 16px;
     width: 60%;
-    max-width: 10000px;
-    border-radius: 25px;
+    max-width: 400px;
+    border-radius: 20px;
+    border: none;
+    padding: 0 15px;
 }
+
 
 .moje-inz,
 .oblubene-inz,
@@ -61,90 +75,82 @@
 .toggle-dark {
     display: flex;
     align-items: center;
-    background-color: orange;
 }
 
 .mojei-text,
 .pridati-text,
+.oblubenei-text,
 .dark-toggle {
-    height: 50px;
-    padding: 0 18px;
-    font-size: 16px;
-    border-radius: 25px;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 20px;
     border: none;
     cursor: pointer;
     background-color: white;
+    color: #2C3E50;
+    transition: background-color 0.3s, transform 0.1s, color 0.3s;
 }
-.oblubenei-text{
-width: 50px;
-height: 50px;
-    padding: 0 0px;
-    font-size: 16px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    background-color: white;
-}
-.oblubenei-text:hover{
-background-color: orangered;
-transition: 0.3s;
 
+.oblubenei-text {
+    width: 40px;
+    padding: 0;
+}
+
+.mojei-text:hover,
+.pridati-text:hover,
+.oblubenei-text:hover,
+.dark-toggle:hover {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.pridati-text:active,
+.oblubenei-text:active,
+.mojei-text:active,
+.kup-hned-button:active {
+    transform: translateY(2px);
+}
+
+.prihlasimg {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
 
 }
+
 
 .dark-toggle {
-    background-color: white;
-        border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background-size: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: 22px;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("https://www.freeiconspng.com/thumbs/crescent-moon-png/crescent-moon-png-20.png");
 }
+
+
+.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+.dark-mode .header1 {
+    background-color: #333;
+}
+
+.dark-mode .kastlik,
+.dark-mode .inzerat {
+    background-color: #222;
+    color: white;
+}
+
 .dark-mode .dark-toggle {
     background-image: url("https://static.thenounproject.com/png/1843184-200.png");
 }
-.dark-toggle {
-    width: 50px;
-    height: 51px;
-    border-radius: 25px;
-    border: none;
 
-}
 
-.dark-toggle:hover {
-    background-color: orangered;
-    color: white;
-    transition: 0.5s;
-
-}
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-.mojei-text:hover,
-.pridati-text:hover {
-    background-color: orangered;
-    transition: 0.3s;
-}
-
-.moje-inz,
-.oblubene-inz,
-.pridat-inzerat,
-.toggle-dark {
-    margin: 0;
-    position: static;
-}
-.oblubenei-button{
-       height: 50px;
-    padding: 0 18px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    background-color: orange;
-}
 .login-popup {
     display: none;
     position: fixed;
@@ -169,152 +175,139 @@ transition: 0.3s;
     width: 90%;
     padding: 8px;
     margin: 5px 0;
-}.prihlasimg{
-width: 50px;
-height: 50px;
-object-fit: cover;
-
-}
-.inz-grid{
-  margin-top: 120px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1fr));
-    height: 340px;
-    column-gap: 20px;
-    row-gap: 20px;
-    border: 2px solid black;
-
-
-
+    border-radius: 5px;
+    border: none;
 }
 
-
-.inzerat{
-gap: 100px;
-display: flex;
-
-}
-
-
-
-.inz-img{
-width: 500px;
-height: 340px;
-object-fit: cover;
-align-items: start;
-
-}
-
-
-.dark-mode .inz-button { background-color: black;color: white;}
-
-
-.inz-zakladneinfo{
-margin-left: 10px;
-height: 100px;
-}
-
-.info-udaje{
-
-font-size: 30px;
-
-}
-.nazov-produktu{
-font-size: 30px;
-
-
-}
-.popis-produktu,.nazov-produktu{
-text-align: center;
-
-}
-.kup-hned{
-
-margin-top: 70px;
-
-
-}
-.kup-hned-button:active{
-    transform: translateY(10px);
-}
-.kup-hned-button{
-border: 4px solid black;
-background-color: lightgray;
-width: 100px;
-height: 50px;
-
-
-}
-.kup-hned-link{
-    text-decoration: none;
-    color: black;
-}
-.dohoda{
-margin: 70px;
-
-}
-.inz-buttons{
-gap: 80px;
-    display: flex;
-}
-.footer-div{
-    margin-top: 900px;
-    position: sticky;
-    top: 100%;
-
-}
-.footer{
-    position: sticky;
-  top: 2000px;
-    left: 0;
-    right: 0;
-    height: 150px;
-    width: 100%;
-    z-index: 10000;
-    background-color: orange;
-
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-    color: black;
-    list-style: none;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-gap: 70px;
-
-}
-.footer-content{
-
-}
-.link{
-    margin-top: 50px;
-text-decoration: underline solid orange;
-color: black;
-display: inline-block;
-display: inline-flex;
-margin-left: 20px;
-font-size: 20px;
-
-}
-
-.kontakt{   
-    text-decoration: underline solid orange;
-    list-style: none;
-    color: black;
-    font-size: 40px;
-}
-.kontakt:hover{
-text-decoration: underline 2px solid black;
-}
-.user-display {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    margin-right: 10px;
-}
 .logout-btn {
     cursor: pointer;
+    margin-top: 5px;
+}
+
+
+.user-display {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-right: 5px;
+}
+
+
+.inz-grid { margin-top: 20px;
+     margin-bottom: 20px; 
+     display: flex; 
+     justify-content: center;
+     }
+
+
+.inzerat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    border: 2px solid #2C3E50;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.inzerat:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.inz-img {
+    width: 100%;
+    max-width: 350px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.inz-opis {
+    flex: 1;
+    min-width: 250px;
+}
+
+.nazov-produktu {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popis-produktu {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+
+.inz-zakladneinfo {
+    min-width: 230px;
+}
+
+.zaklinfo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.info-nadpis td {
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.info-udaje td {
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+
+.inz-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.kup-hned-button {
+    border: 2px solid #2C3E50;
+    background-color: #f0f0f0;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.kup-hned-button:hover {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.kup-hned-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.footer-div {
+    margin-top: auto;
+}
+
+.footer {
+    background: #2C3E50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer-content {
+    list-style: none;
+}
+
+.link, .kontakt {
+    margin: 10px 0;
 }

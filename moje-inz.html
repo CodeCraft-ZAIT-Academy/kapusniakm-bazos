@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje inzeráty</title>
+    <link rel="stylesheet" href="moje-inz.css">
+</head>
+
+<body>
+
+
+    <div class="header1">
+
+        <div class="nazov">
+            <a class="nazov-text" href="bazosP1.html">Bazod</a>
+        </div>
+
+        <div class="searchbar">
+            <input class="searchbar-text" type="search" placeholder="Search">
+        </div>
+
+       <div class="moje-inz">
+        <a href="moje-inz.html">
+        <input class="mojei-text" type="button" value="Moje inzeráty">
+        </a>
+    </div>
+
+    <div class="pridat-inzerat">
+        <a href="pridat-inz.html">
+        <input class="pridati-text" type="button" value="Pridať inzerát">
+        </a>
+    </div>
+
+        <div class="toggle-dark">
+            <button class="dark-toggle" onclick="document.body.classList.toggle('dark-mode')"></button>
+        </div>
+
+    </div>
+
+  
+    <h1 class="page-title">Moje inzeráty</h1>
+
+    
+    <div id="myAds" class="ads-container"></div>
+
+   
+    <div class="footer-div">
+        <div class="footer">
+            <ul class="footer-content">
+                <li class="kontakt"><a class="kontakt" href="">Kontakt</a></li>
+                <li class="link"><strong>Adresa:</strong> 01361 Kotešová</li>
+                <li class="link"><strong>Tel. číslo:</strong> 123456789</li>
+                <li class="link"><strong>Email:</strong> kapusniakmato@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+   
+    <script>
+        const ads = JSON.parse(localStorage.getItem("myAds")) || [];
+        const container = document.getElementById("myAds");
+
+        if (ads.length === 0) {
+            container.innerHTML = "<p class='no-ads'>Zatiaľ nemáte žiadne inzeráty.</p>";
+        } else {
+            ads.forEach(ad => {
+                const card = document.createElement("div");
+                card.className = "inzerat";
+
+               card.innerHTML = `
+    <img class="inz-img" src="${ad.image}" alt="Inzerát">
+    <div class="inz-info">
+        <h2 class="nazov-produktu">${ad.title}</h2>
+        <p class="popis-produktu">${ad.description}</p>
+        <p class="info-udaje"><strong>Cena:</strong> ${ad.price} €</p>
+
+        <button class="delete-btn" onclick="deleteAd(${ads.indexOf(ad)})">Odstrániť</button>
+    </div>
+`;
+
+
+                container.appendChild(card);
+            });
+        }
+    </script>
+    <script>
+    function deleteAd(index) {
+        let ads = JSON.parse(localStorage.getItem("myAds")) || [];
+
+        ads.splice(index, 1); // remove the ad
+
+        localStorage.setItem("myAds", JSON.stringify(ads));
+
+        location.reload(); // refresh the page to update the list
+    }
+</script>
+
+
+</body>
+</html>

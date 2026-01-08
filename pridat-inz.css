@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #F4F4F4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 130px;
+}
+
+/* HEADER (same as main page) */
+.header1 {
+    background: #2C3E50;
+    padding: 10px 20px;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nazov-text {
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.searchbar {
+    flex: 1;
+    min-width: 200px;
+}
+
+.searchbar-text {
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+}
+
+.mojei-text,
+.pridati-text {
+    background: #3498DB;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mojei-text:hover,
+.pridati-text:hover {
+    background: #1F78B4;
+    transform: translateY(-3px);
+}
+
+.dark-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    background-image: url("https://www.freeiconspng.com/thumbs/crescent-moon-png/crescent-moon-png-20.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* PAGE TITLE */
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+/* FORM */
+.form-container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #2C3E50;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #1F78B4;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+.footer-div {
+    margin-top: auto;
+}
+
+.footer {
+    background: #2C3E50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer-content {
+    list-style: none;
+}
+
+.link, .kontakt {
+    margin: 10px 0;
+}
