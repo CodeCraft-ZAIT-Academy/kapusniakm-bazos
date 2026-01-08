@@ -34,9 +34,17 @@ body {
     border-radius: 10px;
     overflow: hidden;
 }
+.mapa:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    
+}
 
-
-.dark-mode .kontakt-container {
+.dark-mode .kontakt-container{
+    background: #222;
+    color: white;
+}
+.dark-mode .kontakt-container2{
     background: #222;
     color: white;
 }
