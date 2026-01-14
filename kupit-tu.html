@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kúpiť produkt - Bazod</title>
+    <link rel="stylesheet" href="bazosP1.css">
+    <link rel="stylesheet" href="kupit-tu.css">
+</head>
+<body>
+
+    <div class="header1">
+        <div class="nazov">
+            <a class="nazov-text" href="index.html">Bazod</a>
+        </div>
+
+        <div class="searchbar">
+            <input class="searchbar-text" type="search" placeholder="Search">
+        </div>
+
+        <div class="oblubene-inz">
+            <div id="userDisplay" class="user-display"></div>
+            <button class="oblubenei-button" onclick="openLogin()">
+                <img class="prihlasimg" src="https://cdn-icons-png.flaticon.com/512/310/310818.png">
+            </button>
+        </div>
+
+        <div class="moje-inz">
+            <a href="moje-inz.html">
+            <input class="mojei-text" type="button" value="Moje inzeráty">
+            </a>
+        </div>
+
+        <div class="pridat-inzerat">
+            <a href="pridat-inz.html">
+            <input class="pridati-text" type="button" value="Pridať inzerát">
+            </a>
+        </div>
+
+        <div class="toggle-dark">
+            <button class="dark-toggle" onclick="toggleDarkMode()"></button>
+        </div>
+    </div>
+
+    <div id="loginPopup" class="login-popup">
+        <div class="login-box">
+            <h2>Prihlásenie</h2>
+            <input type="text" id="fullname" placeholder="Meno">
+            <input type="email" id="username" placeholder="Email">
+            <input type="password" id="password" placeholder="Heslo">
+            <button onclick="login()">Prihlásiť sa</button>
+            <button onclick="logout()" class="logout-btn">Odhlásiť</button>
+            <button onclick="closeLogin()">Zatvoriť</button>
+            <p id="loginMessage">Zadajte meno, email a heslo</p>
+        </div>
+    </div>
+
+    <main class="page-content">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/400x400.png?text=Produkt" alt="Produkt">
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">Placeholder- Nazov</h1>
+                <p class="product-price">Cena:  €</p>
+                <p class="product-desc">Popis produktu:</p>
+                <div class="product-buttons">
+                    <button class="buy-now" onclick="buyProduct()">Kúpiť cez nás</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-div">
+        <div class="footer">
+            <ul class="footer-content">
+                <li class="kontakt"><a class="kontakt" href="kontakt.html">Kontakt</a></li>
+                <li class="link"><strong>Adresa:</strong> 01361 Kotešová</li>
+                <li class="link"><strong>Tel. číslo:</strong> 123456789</li>
+                <li class="link"><strong>Email:</strong> kapusniakmato@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() { document.body.classList.toggle("dark-mode"); }
+        function openLogin() { document.getElementById("loginPopup").style.display = "flex"; }
+        function closeLogin() { document.getElementById("loginPopup").style.display = "none"; }
+        window.onload = function () {
+            const savedName = localStorage.getItem("loggedName");
+            if(savedName){document.getElementById("userDisplay").textContent = savedName;}
+        };
+        function login() {
+            const name = document.getElementById("fullname").value;
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            const msg = document.getElementById("loginMessage");
+            const userDisplay = document.getElementById("userDisplay");
+            if(user==="kapusniakmato@gmail.com" && pass==="1234" && name.trim()!==""){
+                msg.style.color="green";
+                msg.textContent="Vitaj, "+name+"!";
+                userDisplay.textContent=name;
+                localStorage.setItem("loggedName", name);
+                setTimeout(closeLogin, 1000);
+            } else { msg.style.color="red"; msg.textContent="Zlé meno, email alebo heslo!"; }
+        }
+        function logout() { localStorage.removeItem("loggedName"); document.getElementById("userDisplay").textContent=""; }
+
+        function buyProduct() { alert("Ďakujeme za nákup cez našu stránku, kontaktujeme Vás keď bude váš produkt dostupný"); }
+    </script>
+
+</body>
+</html>

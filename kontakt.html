@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,39 +9,40 @@
     <link rel="stylesheet" href="kontakt.css">
     <link rel="stylesheet" href="bazosP1.css">
 </head>
+
 <body>
 
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
         }
-    
+
         function openLogin() {
             document.getElementById("loginPopup").style.display = "flex";
         }
-    
+
         function closeLogin() {
             document.getElementById("loginPopup").style.display = "none";
         }
-    
+
         window.onload = function () {
             const savedName = localStorage.getItem("loggedName");
             if (savedName) {
                 document.getElementById("userDisplay").textContent = savedName;
             }
         };
-    
+
         function login() {
             const name = document.getElementById("fullname").value;
             const user = document.getElementById("username").value;
             const pass = document.getElementById("password").value;
-    
+
             const msg = document.getElementById("loginMessage");
             const userDisplay = document.getElementById("userDisplay");
-    
+
             const correctEmail = "kapusniakmato@gmail.com";
             const correctPass = "1234";
-    
+
             if (user === correctEmail && pass === correctPass && name.trim() !== "") {
                 msg.style.color = "green";
                 msg.textContent = "Vitaj, " + name + "!";
@@ -52,7 +54,7 @@
                 msg.textContent = "Zlé meno, email alebo heslo!";
             }
         }
-    
+
         function logout() {
             localStorage.removeItem("loggedName");
             document.getElementById("userDisplay").textContent = "";
@@ -60,6 +62,7 @@
     </script>
 
 
+   
     <div class="header1">
         <div class="nazov">
             <a class="nazov-text" href="index.html">Bazod</a>
@@ -94,8 +97,8 @@
         </div>
     </div>
 
-    
-    <div id="loginPopup" class="login-popup">
+
+        <div id="loginPopup" class="login-popup">
         <div class="login-box">
             <h2>Prihlásenie</h2>
 
@@ -111,35 +114,72 @@
         </div>
     </div>
 
-  
-    <div class="kontakt-container">
-        <h1>Kontakt</h1>
 
-        <div class="kontakt-box">
-            <p><strong>Adresa:</strong> 01361 Kotešová</p>
-            <p><strong>Telefón:</strong> 123 456 789</p>
-            <p><strong>Email:</strong> kapusniakmato@gmail.com</p>
+
+    <div class="page-content">
+
+        <div class="kontakt-container">
+            <h1>Kontakt</h1>
         </div>
 
-        <div class="mapa">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.947983371428!2d18.851!3d49.233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47145f7f3b8f0a4f%3A0xaaa!2sKote%C5%A1ov%C3%A1!5e0!3m2!1ssk!2ssk!4v000000000"
-                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
+        <div class="kontakt-container2">
+            <div class="kontakt-box">
+                <p><strong>Adresa:</strong> 01361 Kotešová</p>
+                <p><strong>Telefón:</strong> 123 456 789</p>
+                <p><strong>Email:</strong> <a href="mailto:kapusniakmato@gmail.com">kapusniakmato@gmail.com</a></p>
+            </div>
         </div>
-    </div>
 
+    
+        <div class="kontakt-container2">
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.947983371428!2d18.851!3d49.233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47145f7f3b8f0a4f%3A0xaaa!2sKote%C5%A1ov%C3%A1!5e0!3m2!1ssk!2ssk!4v000000000"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
 
+    
+        <div class="kontakt-container2">
+            <div class="kontakt-box">
 
+                <table style="width:100%; border-collapse: collapse;">
+                    <tr>
+                        <td>
+                            <strong>Dohľadanie už vymazaných inzerátov - žiadosti na políciu</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px; padding-bottom:20px;">
+                            Žiadosti na dohľadanie inzerátov zasielajte prosím najlepšie na Email:
+                            kapusniakmato@gmail.com, alebo poštou na adresu: Kotešová 538, 013 61, SR.
+                        </td>
+                    </tr>
 
-    <div class="kontakt-container2">
-        <div class="kontakt-box">
-        <p><strong>Dohľadanie už vymazaných inzerátov - žiadosti na políciu</strong></p>
-<p>Žiadosti na dohľadanie inzerátov zasielajte prosím najlepšie na Email:kapusniakmato@gmail.com, alebo poštou na adresu: Kotešová 538, 013 61, SR.</p>
+                    <tr>
+                        <td>
+                            <strong>Prečo inzerovať u nás</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px; padding-bottom:20px;">
+                            Sme nová lepšia verzia originálnej stránky
+                            <a href="https://www.bazos.sk/"> bazoš</a>, môžete u nás predávať svoje veci pomocou inzerátov a
+                            taktiež kupovať od iných používateľov alebo priamo od nás.
+                        </td>
+                    </tr>
 
-<p><strong>Prečo inzerovať u nás</strong></p>
-<p>Sme nová lepšia verzia originálnej stránky bazoš, môžete u nás predávať svoje veci pomocou inzerátov a taktiež kupovať od iných používateľov alebo priamo od nás.</p>
-</div>
+                    <tr>
+                        <td>
+                            Zákony SR o online obchodovaní:
+                            <a href="zakonypreludi_sk_128_2002_zz_20260101.pdf">Otvoriť v PDF</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
 
     </div>
 
