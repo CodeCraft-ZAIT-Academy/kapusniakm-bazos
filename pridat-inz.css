@@ -99,7 +99,10 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 12px rgba(0,0,0,0.15);
 }
-
+.dark-mode .form-container {
+    background: #222;
+    color: white;
+}
 .form-input {
     width: 100%;
     padding: 10px;
@@ -107,6 +110,10 @@ body {
     border: 2px solid #2C3E50;
     margin-bottom: 15px;
     font-size: 16px;
+}
+.dark-mode .form-input {
+background-color: #2C3E50;
+
 }
 
 .submit-btn {

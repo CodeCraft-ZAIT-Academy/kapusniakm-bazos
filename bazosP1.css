@@ -181,9 +181,16 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.heslo{
+    display: block;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 210px;
+    height: 25px;
+}
 .login-box {
-    background: #3498DB;
+    background: #2C3E50;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
