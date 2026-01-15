@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BazosP2-auto</title>
+
+ 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <link rel="stylesheet" href="bazosP2-pocitac.css">
+    <link rel="stylesheet" href="bazosP1.css">
+</head>
+
+<body>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        } </script>
+
+
+    <div class="header1">
+
+        <div class="nazov">
+            <a class="nazov-text" href="index.html">Bazod</a>
+        </div>
+
+        <div class="searchbar">
+            <input class="searchbar-text" type="search" placeholder="Search">
+        </div>
+
+        <div class="oblubene-inz">
+            <div id="userDisplay" class="user-display"></div>
+
+            <button class="oblubenei-button" onclick="openLogin()">
+                <div class="oblubenei-text">
+                    <img class="prihlasimg" src="https://cdn-icons-png.flaticon.com/512/310/310818.png" alt="Prihlasovanie">
+                </div>
+            </button>
+        </div>
+
+        <div id="loginPopup" class="login-popup">
+            <div class="login-box">
+                <h2>Prihlásenie</h2>
+
+                <input type="text" id="fullname" placeholder="Meno">
+                <input type="email" id="username" placeholder="Email">
+                <input type="password" id="password" placeholder="Heslo">
+
+                <button onclick="login()">Prihlásiť sa</button>
+                <button onclick="logout()" class="logout-btn">Odhlásiť</button>
+                <button onclick="closeLogin()">Zatvoriť</button>
+
+                <p id="loginMessage">Zadajte meno, email a heslo</p>
+            </div>
+        </div>
+
+    <div class="moje-inz">
+        <a href="moje-inz.html">
+        <input class="mojei-text" type="button" value="Moje inzeráty">
+        </a>
+    </div>
+
+    <div class="pridat-inzerat">
+        <a href="pridat-inz.html">
+        <input class="pridati-text" type="button" value="Pridať inzerát">
+        </a>
+    </div>
+
+        <div class="toggle-dark">
+            <button class="dark-toggle" onclick="toggleDarkMode()"></button>
+        </div>
+
+    </div>
+
+
+    <main class="page-content">
+
+        <div class="inz-grid">
+            <div class="inzerat">
+
+                <img class="inz-img" src="https://cdn.aukro.cz/images/sk1768390198319/020-herny-pc-i7-14700kf-32gb-ram-rtx-5070ti-1tb-ssd-254452250.jpeg" alt="Computer">
+
+                <div class="inz-opis">
+                    <h1 class="nazov-produktu">Herný PC - i7-14700KF / 32GB RAM / RTX 5070Ti / 1TB SSD</h1>
+
+                    <ul class="popis-produktu">
+                        
+                        <p>PC je kompletne nainštalovaný vrátane všetkých aktualizácií, ovládačov a je pripravený na okamžité používanie. Stačí ho teda len zapojiť a ihneď používať.RGB je možné ovládať cez predinštalovaný GIGABYTE SW. Záruka 24 mesiacov. Za príplatok je možné predĺžiť na 36 mesiacov.</p>
+                        <li><strong>CPU -</strong> Intel Core i7-14700KF</li>
+                        <li><strong>Chladič -</strong> Arctic Liquid Freezer III 360 ARGB B</li>
+                        <li><strong>RAM -</strong> G.Skill 2x16GB 6000MHz Ripjaws</li>
+                        <li><strong>GPU –</strong> Palit RTX 5070Ti Gaming Pro</li>
+                        <li><strong>SSD –</strong> Crucial P310 - 1TB</li>
+                        <li><strong>PSU -</strong> ASUS TUF 750W, 80+G</li>
+                        <li><strong>CASE -</strong> Montech King 45 + 4x ARGBG</li>
+                        <li><strong>OS -</strong> Windows 11 PRO</li>
+                        <li><strong>MB -</strong> GIGABYTE B760 GAMING X Gen5</li>
+                    </ul>
+                </div>
+
+                <div class="inz-zakladneinfo">
+                    <table class="zaklinfo-table">
+                        <tr class="info-nadpis">
+                    
+                            <td>Cena:</td>
+                            <td></td>
+                            <td>Lokalita:</td>
+                        </tr>
+                        <tr class="info-udaje">
+                            <td>2 300€</td>
+                            <td></td>
+                            <td>Kotešová</td>
+                        </tr>
+                    </table>
+
+                    <div class="inz-buttons">
+                        <div class="kup-hned">
+                            <a href="kupit-tu.html">
+                            <button class="kup-hned-button">
+                            Kúpiť tu
+                            </button>
+                        </a>
+                        </div>
+                        <div class="dohoda">
+                            <button class="kup-hned-button">
+                                <a class="kup-hned-link" href="">Dohodnúť sa</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="inz-grid">
+            <div class="inzerat">
+
+                <img class="inz-img" src="https://elitehubs.com/cdn/shop/files/w800_1_eb14c0b2-0a17-401a-9041-4363b531f804.png?v=1749135009" alt="Graphic card">
+
+                <div class="inz-opis">
+                    <h1 class="nazov-produktu">ASUS TUF Radeon RX 9070 XT O16G GAMING</h1>
+
+                    <ul class="popis-produktu">
+                        
+                        <p>Grafická karta – 16 GB GDDR6 (20000 MHz), AMD Radeon, RDNA 4.0 (Navi 48, 2400 MHz), Boost 3080 MHz, PCI Express x16 5.0, 256 Bit, DisplayPort 2.1a a HDMI 2.1b, šírka 330 mm.</p>
+                        <li><strong>Modelové označenie:</strong> RX 9070 XT</li>
+                        <li><strong>Grafický procesor:</strong> Navi 48</li>
+                        <li><strong>Veľkosť operačnej pamäte RAM:</strong> 16 GB</li>
+                        <li><strong>Frekvencia jadra:</strong> 2 400 MHz</li>
+                        <li><strong>Na pripojenie k PC</strong>  PCI Express x16 5.0</li>
+                        <li><strong>Rozhranie zbernice</strong> PCIe 5.0 x16</li>
+                        <li><strong>Rozmery:</strong> Šírka 330 mm, Výška 62,5 mm, Hĺbka 140 mm</li>
+                        <li><strong>Odporúčaný výkon zdroja:</strong>  850 W</li>
+                    </ul>
+                </div>
+
+                <div class="inz-zakladneinfo">
+                    <table class="zaklinfo-table">
+                        <tr class="info-nadpis">
+                            <td>Cena:</td>
+                            <td></td>
+                            <td>Lokalita:</td>
+                        </tr>
+                        <tr class="info-udaje">
+                            <td>11 000€</td>
+                            <td></td>
+                            <td>Kotešová</td>
+                        </tr>
+                    </table>
+
+                    <div class="inz-buttons">
+                        <div class="kup-hned">
+                            <a href="kupit-tu.html">
+                                <button class="kup-hned-button">
+                                Kúpiť tu
+                                </button>
+                            </a>
+                        </div>
+                        <div class="dohoda">
+                            <button class="kup-hned-button">
+                                <a class="kup-hned-link" href="">Dohodnúť sa</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <div class="footer-div">
+        <div class="footer">
+            <ul class="footer-content">
+                <li class="kontakt"><a class="kontakt" href="kontakt.html">Kontakt</a></li>
+                <li class="link"><strong>Adresa: </strong> 01361 Kotešová</li>
+                <li class="link"><strong>Tel. číslo: </strong> 123456789</li>
+                <li class="link"><strong>Email: </strong> kapusniakmato@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function openLogin() {
+            document.getElementById("loginPopup").style.display = "flex";
+        }
+
+        function closeLogin() {
+            document.getElementById("loginPopup").style.display = "none";
+        }
+
+        window.onload = function () {
+            const savedName = localStorage.getItem("loggedName");
+            if (savedName) {
+                document.getElementById("userDisplay").textContent = savedName;
+            }
+        };
+
+        function login() {
+            const name = document.getElementById("fullname").value;
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            const msg = document.getElementById("loginMessage");
+            const userDisplay = document.getElementById("userDisplay");
+
+            const correctEmail = "kapusniakmato@gmail.com";
+            const correctPass = "1234";
+
+            if (user === correctEmail && pass === correctPass && name.trim() !== "") {
+                msg.style.color = "lightgreen";
+                msg.textContent = "Vitaj, " + name + "!";
+
+                userDisplay.textContent = name;
+                localStorage.setItem("loggedName", name);
+
+                setTimeout(() => {
+                    closeLogin();
+                }, 1000);
+            } else {
+                msg.style.color = "red";
+                msg.textContent = "Zlé meno, email alebo heslo!";
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedName");
+            document.getElementById("userDisplay").textContent = "";
+        }
+    </script>
+
+</body>
+
+</html>
