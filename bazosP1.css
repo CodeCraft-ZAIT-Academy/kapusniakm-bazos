@@ -6,6 +6,47 @@ body {
     display: flex;
     flex-direction: column;
 }
+@media (max-width: 768px) {
+    .oblubene-inz,
+    .moje-inz,
+    .pridat-inzerat,
+    .toggle-dark
+      {
+        display: none;
+    }
+}
+
+
+.mobile-burger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mobile-burger {
+        display: block;
+    }
+}
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    background: #111;
+    padding: 16px;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
 
 
 .header1 {
