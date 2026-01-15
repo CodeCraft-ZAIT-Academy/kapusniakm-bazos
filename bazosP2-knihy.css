@@ -1,0 +1,310 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: #222;
+}
+
+.header1 {
+    background-color: orange;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 10000;
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.page-content {
+    margin-top: 120px;
+    padding: 20px;
+}
+
+
+.nazov {
+    display: flex;
+    align-items: center;
+}
+
+.nazov-text {
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nazov-text:hover {
+    color: #3498DB;  }  
+
+    .searchbar {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .searchbar-text {
+        width: 100%;
+        height: 35px;
+        border-radius: 20px;
+        border: none;
+        padding-left: 10px;
+    }
+
+.moje-inz,
+.oblubene-inz,
+.pridat-inzerat,
+.toggle-dark {
+    display: flex;
+    align-items: center;
+}
+
+
+.mojei-text,
+.pridati-text,
+.oblubenei-text,
+.dark-toggle {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: #2C3E50;
+    transition: background-color 0.3s, transform 0.1s, color 0.3s;
+}
+
+.oblubenei-text {
+    width: 40px;
+    padding: 0;
+}
+
+.mojei-text:hover,
+.pridati-text:hover,
+.oblubenei-text:hover,
+ {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.pridati-text:active,
+.oblubenei-text:active,
+.mojei-text:active,
+.kup-hned-button:active {
+    transform: translateY(2px);
+}
+
+.prihlasimg {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+
+.dark-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    background-image: url("https://www.freeiconspng.com/thumbs/crescent-moon-png/crescent-moon-png-20.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+
+.dark-mode .kastlik,
+.dark-mode .inzerat {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .dark-toggle {
+    background-image: url("https://static.thenounproject.com/png/1843184-200.png");
+}
+
+
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: orange;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-box input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.logout-btn {
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+.user-display {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-right: 5px;
+}
+
+.inz-grid {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.inzerat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    border: 2px solid #2C3E50;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.inzerat:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.inz-img {
+    width: 100%;
+    max-width: 350px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.inz-opis {
+    flex: 1;
+    min-width: 250px;
+}
+
+.nazov-produktu {
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 610px;
+}
+
+.popis-produktu {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.inz-zakladneinfo {
+    margin-top: 150px;
+    min-width: 230px;
+    height: 150px;
+}
+
+.zaklinfo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    
+}
+
+.info-nadpis td {
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.info-udaje td {
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+
+.inz-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.kup-hned-button {
+    border: 2px solid #2C3E50;
+    background-color: #f0f0f0;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.kup-hned-button:hover {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.kup-hned-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.footer-div {
+    margin-top: auto;
+}
+
+.footer {
+    background: #2C3E50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer-content {
+    list-style: none;
+}
+
+.link, .kontakt {
+    margin: 10px 0;
+}

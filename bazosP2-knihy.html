@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BazosP2-auto</title>
+
+ 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <link rel="stylesheet" href="bazosP2-knihy.css">
+    <link rel="stylesheet" href="bazosP1.css">
+</head>
+
+<body>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        } </script>
+
+
+    <div class="header1">
+
+        <div class="nazov">
+            <a class="nazov-text" href="index.html">Bazod</a>
+        </div>
+
+        <div class="searchbar">
+            <input class="searchbar-text" type="search" placeholder="Search">
+        </div>
+
+        <div class="oblubene-inz">
+            <div id="userDisplay" class="user-display"></div>
+
+            <button class="oblubenei-button" onclick="openLogin()">
+                <div class="oblubenei-text">
+                    <img class="prihlasimg" src="https://cdn-icons-png.flaticon.com/512/310/310818.png" alt="Prihlasovanie">
+                </div>
+            </button>
+        </div>
+
+        <div id="loginPopup" class="login-popup">
+            <div class="login-box">
+                <h2>Prihlásenie</h2>
+
+                <input type="text" id="fullname" placeholder="Meno">
+                <input type="email" id="username" placeholder="Email">
+                <input type="password" id="password" placeholder="Heslo">
+
+                <button onclick="login()">Prihlásiť sa</button>
+                <button onclick="logout()" class="logout-btn">Odhlásiť</button>
+                <button onclick="closeLogin()">Zatvoriť</button>
+
+                <p id="loginMessage">Zadajte meno, email a heslo</p>
+            </div>
+        </div>
+
+    <div class="moje-inz">
+        <a href="moje-inz.html">
+        <input class="mojei-text" type="button" value="Moje inzeráty">
+        </a>
+    </div>
+
+    <div class="pridat-inzerat">
+        <a href="pridat-inz.html">
+        <input class="pridati-text" type="button" value="Pridať inzerát">
+        </a>
+    </div>
+
+        <div class="toggle-dark">
+            <button class="dark-toggle" onclick="toggleDarkMode()"></button>
+        </div>
+
+    </div>
+
+
+    <main class="page-content">
+
+        <div class="inz-grid">
+            <div class="inzerat">
+
+                <img class="inz-img" src="//mrtns.sk/tovar/_l/167/l167553.jpg?v=17684548512" alt="Computer">
+
+                <div class="inz-opis">
+                    <h1 class="nazov-produktu">A Game of Thrones</h1>
+
+                    <ul class="popis-produktu">
+                        
+                        <p>PC je kompletne nainštalovaný vrátane všetkých aktualizácií, ovládačov a je pripravený na okamžité používanie. Stačí ho teda len zapojiť a ihneď používať.RGB je možné ovládať cez predinštalovaný GIGABYTE SW. Záruka 24 mesiacov. Za príplatok je možné predĺžiť na 36 mesiacov.</p>
+                        <li><strong>Rozmer:</strong> 148×233 mm</li>
+                        <li><strong>Počet strán:</strong> 656</li>
+                        <li><strong>ISBN:</strong> 9788022207010</li>
+                        <li><strong>Rok vydania:</strong> 2014</li>
+                    </ul>
+                </div>
+
+                <div class="inz-zakladneinfo">
+                    <table class="zaklinfo-table">
+                        <tr class="info-nadpis">
+                    
+                            <td>Cena:</td>
+                            <td></td>
+                            <td>Lokalita:</td>
+                        </tr>
+                        <tr class="info-udaje">
+                            <td>2 300€</td>
+                            <td></td>
+                            <td>Kotešová</td>
+                        </tr>
+                    </table>
+
+                    <div class="inz-buttons">
+                        <div class="kup-hned">
+                            <a href="kupit-tu.html">
+                            <button class="kup-hned-button">
+                            Kúpiť tu
+                            </button>
+                        </a>
+                        </div>
+                        <div class="dohoda">
+                            <button class="kup-hned-button">
+                                <a class="kup-hned-link" href="">Dohodnúť sa</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+
+    </main>
+
+    <div class="footer-div">
+        <div class="footer">
+            <ul class="footer-content">
+                <li class="kontakt"><a class="kontakt" href="kontakt.html">Kontakt</a></li>
+                <li class="link"><strong>Adresa: </strong> 01361 Kotešová</li>
+                <li class="link"><strong>Tel. číslo: </strong> 123456789</li>
+                <li class="link"><strong>Email: </strong> kapusniakmato@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function openLogin() {
+            document.getElementById("loginPopup").style.display = "flex";
+        }
+
+        function closeLogin() {
+            document.getElementById("loginPopup").style.display = "none";
+        }
+
+        window.onload = function () {
+            const savedName = localStorage.getItem("loggedName");
+            if (savedName) {
+                document.getElementById("userDisplay").textContent = savedName;
+            }
+        };
+
+        function login() {
+            const name = document.getElementById("fullname").value;
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            const msg = document.getElementById("loginMessage");
+            const userDisplay = document.getElementById("userDisplay");
+
+            const correctEmail = "kapusniakmato@gmail.com";
+            const correctPass = "1234";
+
+            if (user === correctEmail && pass === correctPass && name.trim() !== "") {
+                msg.style.color = "lightgreen";
+                msg.textContent = "Vitaj, " + name + "!";
+
+                userDisplay.textContent = name;
+                localStorage.setItem("loggedName", name);
+
+                setTimeout(() => {
+                    closeLogin();
+                }, 1000);
+            } else {
+                msg.style.color = "red";
+                msg.textContent = "Zlé meno, email alebo heslo!";
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedName");
+            document.getElementById("userDisplay").textContent = "";
+        }
+    </script>
+
+</body>
+
+</html>
