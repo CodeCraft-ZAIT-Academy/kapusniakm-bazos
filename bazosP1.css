@@ -16,6 +16,22 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .oblubene-inz,
+    .oblubenei-button
+    .prihlasimg
+      {
+        
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .oblubenei-button
+      {
+        
+        display: none;
+    }
+}
 
 .mobile-burger {
     display: none;
@@ -27,7 +43,7 @@ body {
 
 @media (max-width: 768px) {
     .mobile-burger {
-        display: block;
+        display: flex;
     }
 }
 .mobile-menu {
@@ -35,7 +51,8 @@ body {
     position: fixed;
     top: 60px;
     right: 10px;
-    background: #111;
+    background: #2C3E50;
+    color: #3498DB;
     padding: 16px;
     border-radius: 12px;
     flex-direction: column;

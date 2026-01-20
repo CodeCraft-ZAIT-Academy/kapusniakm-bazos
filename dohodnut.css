@@ -1,0 +1,39 @@
+.product-page {
+    margin-top: 180px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.product-karta {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.dark-mode .product-card {
+    background: #1E1E1E;
+    color: white;
+}
+
+.product-karta img {
+    width: 220px;
+    margin: 20px 0;
+}
+
+.buy-btn {
+    background: #3498DB;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.buy-btn:hover {
+    background: #1F78B4;
+}
