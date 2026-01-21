@@ -33,6 +33,18 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .nazov {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nazov-text {
+        display: none;
+    }
+}
+
 
 
 .mobile-burger {
@@ -314,5 +326,4 @@ body {
 
 .category-img {
     transition: filter 0.3s ease;
-
 }
